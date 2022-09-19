@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wolfram panda option</title>
+    <!--    Add css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container p-5">
+    <!--Add form for user to insert api key in bootstrap-->
+    <!--        <label for="api_key" class="form-label">API Key</label>-->
+    <label for="api_key">Api key</label>
+    <input type="text" aria-describedby="describe"
+           class="form-control sketch-lined-thin" id="apiKey" name="api_key"
+           placeholder="Enter API Key">
+
+    <p class="form-text " id="describe">Go to wolfram developer site to obtain api keys</p>
+    <button type="submit" id="saveApiBtn" class="btn mt-2 sketch-lined-thin  is-drawn text-black">Submit
+    </button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

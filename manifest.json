@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "wolfram-panda",
+  "description": "Help you query wolfram alpha instantly",
+  "version": "0.0.1",
+  "icons": {
+    "64": "icons/icons8-wolfram-alpha-50.png"
+  },
+  "action": {
+    "default_icon": {
+      "19": "icons/icons8-wolfram-alpha-50.png",
+      "38": "icons/icons8-wolfram-alpha-50.png"
+    },
+    "default_popup": "action.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background_script.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "dist/content_script.bundle.js"
+
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  }
+}

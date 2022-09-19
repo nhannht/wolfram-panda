@@ -1,0 +1,17 @@
+{
+  "name": "wolfram-alpha-query-chrome-extension",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "webpack": "webpack watch",
+    "dev": "web-ext run -t chromium --chromium-binary /usr/bin/google-chrome-stable",
+    "lint": "web-ext lint"
+  }
+}
